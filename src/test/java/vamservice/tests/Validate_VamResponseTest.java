@@ -10,7 +10,7 @@ import org.testng.asserts.SoftAssert;
 import vamservice.utils.BaseTest;
 
 
-public class Validate_VamResponse extends BaseTest {
+public class Validate_VamResponseTest extends BaseTest {
 
     @Test
     public static void readDataFromFile()

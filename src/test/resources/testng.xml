@@ -4,7 +4,7 @@
     <test name="Test">
         <classes>
 
-            <class name="vamservice.tests.Validate_VamResponse"/>
+            <class name="vamservice.tests.Validate_VamResponseTest"/>
             <class name="vamservice.tests.CouchBaseTest"/>
 
 
