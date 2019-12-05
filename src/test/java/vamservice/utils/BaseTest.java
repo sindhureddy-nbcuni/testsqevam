@@ -1,4 +1,4 @@
-package vamservice.tests;
+package vamservice.utils;
 
 import com.nbcuni.test.POJO.TestPOJO;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -6,33 +6,32 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
-import vamservice.utils.PropertyParser;
+import vamservice.tests.Validate_VamResponse;
 
 import java.io.*;
 import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
-public class Validate_VamRequestTest {
+public class BaseTest {
 
     private String configFile = "configuration.properties";
     private String envFile = "environment.properties";
     private Properties properties;
-    private Properties envProp;
+    private static Properties envProp;
     private PropertyParser propertyParser;
-    private TestPOJO testPOJO;
-    private Validate_VamResponse responseVal;
-    private SoftAssert softAssert;
-    private ExtentReports extentReports;
-    private ExtentTest extentTest;
+    protected static TestPOJO testPOJO;
+    private static Validate_VamResponse responseVal;
+    protected static SoftAssert softAssert;
+    protected static ExtentReports extentReports;
+    protected static ExtentTest extentTest;
     private Response responseDB;
 
 
-    @BeforeTest
+    @BeforeSuite
     public void setup() throws IOException {
         propertyParser = new PropertyParser();
         properties = propertyParser.parseProperties(configFile);
@@ -47,7 +46,7 @@ public class Validate_VamRequestTest {
 
     }
 
-    private Response callApiUrl(String url) {
+    private static Response callApiUrl(String url) {
 
         Response response = given().
                 contentType(ContentType.JSON)
@@ -57,7 +56,7 @@ public class Validate_VamRequestTest {
         return response;
     }
 
-    private String getUrl(TestPOJO testPojo) {
+    private static String getUrl(TestPOJO testPojo) {
         String env = envProp.getProperty("currentenv");
         String url = env + "/v1/freewheel-params?appName="
                 + testPojo.getAppName() + "&brand=" + testPojo.getBrand() + "&platform=" + testPojo.getPlatform()
@@ -82,7 +81,7 @@ public class Validate_VamRequestTest {
     }
 
 
-    private void readDataFromSheet(TestPOJO testPojo, SoftAssert softAssert) {
+    protected static void readDataFromSheet(TestPOJO testPojo, SoftAssert softAssert) {
 
         BufferedReader bufferedReader = null;
         String line = "";
@@ -139,16 +138,7 @@ public class Validate_VamRequestTest {
 
     }
 
-
-
-    @Test
-    public void readDataFromFile()
-    {
-        readDataFromSheet(testPOJO, softAssert);
-    }
-
-
-    @AfterTest
+    @AfterSuite
     public void endTest() {
 
         //extentReports.endTest(extentTest);
