@@ -32,7 +32,6 @@ public class CouchBaseTest extends BaseTest {
 
                 Assert.assertEquals(200, couchbaseResponse.statusCode());
                 extentTest.log(LogStatus.PASS,configReader.getProperty("couchbase" + i));
-                extentTest.log(LogStatus.INFO,couchbaseResponse.prettyPrint());
                 extentTest.log(LogStatus.INFO,"Milliseconds:  "+couchbaseResponse.getTimeIn(TimeUnit.MILLISECONDS));
                 extentReports.endTest(extentTest);
 
