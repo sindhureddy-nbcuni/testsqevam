@@ -5,10 +5,20 @@ import com.google.gson.JsonParser;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.restassured.response.Response;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import vamservice.utils.BaseTest;
 
 
-    public class Validate_VamResponse {
+public class Validate_VamResponse extends BaseTest {
+
+    @Test
+    public static void readDataFromFile()
+    {
+        readDataFromSheet(testPOJO, softAssert);
+    }
+
+
 
             public void validateResponse(Response response, String[] data, SoftAssert softAssert, ExtentTest extentTest) {
                 // TODO Auto-generated method stub
@@ -53,4 +63,8 @@ import org.testng.asserts.SoftAssert;
                     }
                 }
             }
-        }
+
+
+
+
+    }
