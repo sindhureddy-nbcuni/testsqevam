@@ -10,6 +10,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 import vamservice.tests.Validate_VamResponse;
+import vamservice.tests.Validate_VamResponseTest;
 
 import java.io.*;
 import java.util.Properties;
@@ -24,7 +25,7 @@ public class BaseTest {
     private static Properties envProp;
     private PropertyParser propertyParser;
     protected static TestPOJO testPOJO;
-    private static Validate_VamResponse responseVal;
+    private static Validate_VamResponseTest responseVal;
     protected static SoftAssert softAssert;
     protected static ExtentReports extentReports;
     protected static ExtentTest extentTest;
@@ -37,7 +38,7 @@ public class BaseTest {
         properties = propertyParser.parseProperties(configFile);
         envProp = propertyParser.parseEnvProperties(envFile);
         testPOJO = new TestPOJO();
-        responseVal = new Validate_VamResponse();
+        responseVal = new Validate_VamResponseTest();
         softAssert = new SoftAssert();
         extentReports = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentFiles/Report.html", true);
         extentReports.addSystemInfo("Environment", envProp.getProperty("currentenv").substring(10, 13).toUpperCase())
