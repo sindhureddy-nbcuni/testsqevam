@@ -1,0 +1,6 @@
+vamservice/tests/Validate_VamRequestTest.class
+vamservice/tests/Validate_VamResponse.class
+com/nbcuni/test/POJO/ResponsePOJO.class
+com/nbcuni/test/POJO/TestPOJO.class
+vamservice/utils/Environment.class
+vamservice/utils/PropertyParser.class
