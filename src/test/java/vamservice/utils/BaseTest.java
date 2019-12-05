@@ -9,7 +9,6 @@ import io.restassured.response.Response;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
-import vamservice.tests.Validate_VamResponse;
 import vamservice.tests.Validate_VamResponseTest;
 
 import java.io.*;
