@@ -22,7 +22,7 @@ public class CouchBaseTest extends BaseTest {
 
     @Test(priority = -1)
     public void Testing_Couchbase_is_up_and_running() {
-        extentTest = extentReports.startTest("Couchbase should be Up before any test runs");
+        extentTest = extentReports.startTest("Validate health check status");
 
 
         for (int i = 1; i < 11; i++) {
