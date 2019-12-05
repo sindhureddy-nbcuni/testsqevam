@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-05T00:39:52Z" name="Surefire suite" finished-at="2019-12-05T00:39:54Z" duration-ms="1879">
+  <suite started-at="2019-12-05T03:08:19Z" name="Surefire suite" finished-at="2019-12-05T03:08:23Z" duration-ms="3401">
     <groups>
     </groups>
-    <test started-at="2019-12-05T00:39:52Z" name="Surefire test" finished-at="2019-12-05T00:39:54Z" duration-ms="1879">
+    <test started-at="2019-12-05T03:08:19Z" name="Surefire test" finished-at="2019-12-05T03:08:23Z" duration-ms="3401">
       <class name="vamservice.tests.Validate_VamRequestTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:vamservice.tests.Validate_VamRequestTest@20ce78ec]" started-at="2019-12-05T00:39:52Z" name="setup" finished-at="2019-12-05T00:39:52Z" duration-ms="242" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:vamservice.tests.Validate_VamRequestTest@20ce78ec]" started-at="2019-12-05T03:08:19Z" name="setup" finished-at="2019-12-05T03:08:21Z" duration-ms="1809" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="readDataFromFile()[pri:0, instance:vamservice.tests.Validate_VamRequestTest@20ce78ec]" started-at="2019-12-05T00:39:52Z" name="readDataFromFile" finished-at="2019-12-05T00:39:54Z" duration-ms="1463" status="PASS">
+        <test-method signature="readDataFromFile()[pri:0, instance:vamservice.tests.Validate_VamRequestTest@20ce78ec]" started-at="2019-12-05T03:08:21Z" name="readDataFromFile" finished-at="2019-12-05T03:08:23Z" duration-ms="1388" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readDataFromFile -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:vamservice.tests.Validate_VamRequestTest@20ce78ec]" started-at="2019-12-05T00:39:54Z" name="endTest" finished-at="2019-12-05T00:39:54Z" duration-ms="165" status="PASS">
+        <test-method is-config="true" signature="endTest()[pri:0, instance:vamservice.tests.Validate_VamRequestTest@20ce78ec]" started-at="2019-12-05T03:08:23Z" name="endTest" finished-at="2019-12-05T03:08:23Z" duration-ms="196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
